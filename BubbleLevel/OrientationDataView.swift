@@ -19,6 +19,7 @@ struct OrientationDataView: View {
 
     var body: some View {
         VStack {
+
             Text(detector.region.center.latitude.describeAsFixedLengthString(integerDigits: 3, fractionDigits: 6))
                 .font(.system(.body, design: .monospaced))
             Text(detector.region.center.longitude.describeAsFixedLengthString(integerDigits: 3, fractionDigits: 6))

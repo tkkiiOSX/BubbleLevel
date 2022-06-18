@@ -19,8 +19,6 @@ struct LevelView: View {
             OrientationDataView()
                 .padding(.top, 80)*/
             BubbleLevel()
-            OrientationDataView()
-                .padding(.top, 80)
         }
         .onAppear {
             motionDetector.start()
