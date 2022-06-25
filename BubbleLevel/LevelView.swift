@@ -6,20 +6,25 @@
 //
 
 import SwiftUI
-//import MapKit
+
 
 struct LevelView: View {
     @EnvironmentObject var motionDetector: MotionDetector
 
-    /*@State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.6809591, longitude: 139.7673068), span: MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0))*/
-
     var body: some View {
-        VStack {
-            /*Map(coordinateRegion: $region)
-            OrientationDataView()
-                .padding(.top, 80)*/
+        NavigationView {
             BubbleLevel()
+                .navigationTitle("Map")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: SettingView()) {
+                            Text("setting")
+                        }
+                    }
+                }
         }
+        .navigationViewStyle(.stack)
         .onAppear {
             motionDetector.start()
         }

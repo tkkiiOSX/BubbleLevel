@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct BubbleLevelApp: App {
-    @StateObject private var motionDetector = MotionDetector(updateInterval: 0.01)
+    @StateObject private var motionDetector = MotionDetector(updateInterval: 0.1)
 
     var body: some Scene {
         WindowGroup {

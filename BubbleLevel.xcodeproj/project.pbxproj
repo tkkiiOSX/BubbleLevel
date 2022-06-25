@@ -16,6 +16,7 @@
 		EB8D3127283FC18500F27C93 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D3126283FC18500F27C93 /* LevelView.swift */; };
 		EB8D3129283FC1C800F27C93 /* OrientationDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8D3128283FC1C800F27C93 /* OrientationDataView.swift */; };
 		EBEBB81D284C98AE0006AC83 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEBB81C284C98AE0006AC83 /* MapView.swift */; };
+		EBF5E261286712F700E6300A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF5E260286712F700E6300A /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		EB8D3126283FC18500F27C93 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		EB8D3128283FC1C800F27C93 /* OrientationDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationDataView.swift; sourceTree = "<group>"; };
 		EBEBB81C284C98AE0006AC83 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EBF5E260286712F700E6300A /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				EB8D3110283FBF4D00F27C93 /* BubbleLevelApp.swift */,
 				EB8D3124283FC14D00F27C93 /* DoubleExtension.swift */,
 				EB8D3126283FC18500F27C93 /* LevelView.swift */,
+				EBF5E260286712F700E6300A /* SettingView.swift */,
 				EB8D311E283FBFAC00F27C93 /* MotionDetector.swift */,
 				EB8D3128283FC1C800F27C93 /* OrientationDataView.swift */,
 				EBEBB81C284C98AE0006AC83 /* MapView.swift */,
@@ -157,6 +160,7 @@
 				EB8D3125283FC14D00F27C93 /* DoubleExtension.swift in Sources */,
 				EB1D86B22844D8150018D145 /* BubbleLevel.swift in Sources */,
 				EB8D3111283FBF4D00F27C93 /* BubbleLevelApp.swift in Sources */,
+				EBF5E261286712F700E6300A /* SettingView.swift in Sources */,
 				EB8D3129283FC1C800F27C93 /* OrientationDataView.swift in Sources */,
 				EB8D311F283FBFAC00F27C93 /* MotionDetector.swift in Sources */,
 			);
