@@ -11,6 +11,9 @@ import SwiftUI
 struct LevelView: View {
     @EnvironmentObject var motionDetector: MotionDetector
 
+    //@State var Savelat: [Double] = []
+    //@State var Savelng: [Double] = []
+
     var body: some View {
         NavigationView {
             BubbleLevel()
@@ -18,9 +21,17 @@ struct LevelView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: SettingView()) {
-                            Text("setting")
+                        HStack {
+                            Button("緯度経度Save") {
+                                motionDetector.Savelat.append(motionDetector.region.center.latitude)
+                                motionDetector.Savelng.append(motionDetector.region.center.longitude)
+                            }
+
+                            NavigationLink(destination: SettingView()) {
+                                Text("setting")
+                            }
                         }
+
                     }
                 }
         }
