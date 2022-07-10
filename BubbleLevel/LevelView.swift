@@ -23,8 +23,9 @@ struct LevelView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         HStack {
                             Button("緯度経度Save") {
-                                motionDetector.Savelat.append(motionDetector.region.center.latitude)
-                                motionDetector.Savelng.append(motionDetector.region.center.longitude)
+                                motionDetector.saveLat.append(motionDetector.region.center.latitude)
+                                motionDetector.saveLng.append(motionDetector.region.center.longitude)
+                                motionDetector.saveTim.append(Date())
                             }
 
                             NavigationLink(destination: SettingView()) {

@@ -21,8 +21,9 @@ class MotionDetector: ObservableObject {
     //マップ対応
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 35.6809591, longitude: 139.7673068), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
 
-    @Published var Savelat: [Double] = []
-    @Published var Savelng: [Double] = []
+    @Published var saveLat: [Double] = []
+    @Published var saveLng: [Double] = []
+    @Published var saveTim: [Date] = []
 
     var onUpdate: (() -> Void) = {}
 

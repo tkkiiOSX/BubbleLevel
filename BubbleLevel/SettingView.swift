@@ -11,20 +11,34 @@ import SwiftUI
 
 struct SettingView: View {
     @EnvironmentObject var motionDetector: MotionDetector
+    var dateF: DateFormatter {
 
+        let f = DateFormatter()
+        f.timeStyle = .short
+        f.dateStyle = .short
+        f.locale = Locale(identifier: "ja_JP")
+        return f
+    }
     var body: some View {
         VStack {
-            ForEach(0 ..< motionDetector.Savelat.count, id: \.self) { i in
+            ForEach(0 ..< motionDetector.saveLat.count, id: \.self) { i in
 
                 HStack {
-                    Text("緯度\(motionDetector.Savelat[i])")
-                    Text("経度\(motionDetector.Savelng[i])")
+                    Text("No.\(i + 1)")
+                    Text("緯度\(motionDetector.saveLat[i])")
+                    Text("経度\(motionDetector.saveLng[i])")
+                    Text("日時" + dateF.string(from: motionDetector.saveTim[i]))
+                    Button("読み出し\(i + 1)") {
+
+                        motionDetector.region.center.latitude = motionDetector.saveLat[i]
+                        motionDetector.region.center.longitude = motionDetector.saveLng[i]
+                    }
                 }
 
 
             }
-            Text("番号")
-            Text("登録時間")
+
+
             Text("メモ")
             Text("選択緯度経度")
             Text("登録緯度経度")
@@ -38,5 +52,6 @@ struct SettingView: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         SettingView()
+            .environmentObject(MotionDetector(updateInterval: 0.1))
     }
 }
